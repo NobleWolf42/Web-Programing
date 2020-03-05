@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Final - Benjamin Carpenter</title>
+	<link rel="shortcut icon" href="http://hw.cs.southern.edu/favicon.ico" mce_href="http://hw.cs.southern.edu/favicon.ico"/>
+	<script type="text/javascript">
+		var counter = 1;
+		function clicked(which) {
+  			//alert(which);
+  			if (counter % 2 == 0) {
+  				document.getElementById("s"+which).innerHTML = "O";
+  				document.getElementById("nextplayer").innerHTML = "The next player is X!";
+  				document.getElementById("s"+which).onclick = ohere;
+  			}
+  			else {
+  				document.getElementById("s"+which).innerHTML = "X";
+  				document.getElementById("nextplayer").innerHTML = "The next player is O!";
+  				document.getElementById("s"+which).onclick = xhere;
+  			}
+  			counter = counter + 1;
+  		}
+
+  		function xhere() {
+  			alert("There is alredy an X in this space!");
+  		}
+
+  		function ohere() {
+  			alert("There is alredy an O in this space!");
+  		}
+
+		function picpointer() {
+  			var cells = document.getElementsByClassName("cell");
+  			for (var i = 0; i < cells.length; i++) {
+    			cells[i].style.cursor = "pointer";
+  			}
+		}
+		window.onload=picpointer;
+	</script>
+</head>
+<body>
+	<p><a href="index.html">Home</a></p>
+	<h1>Final Programming Question</h1>
+	<table border="1">
+		<tr><th colspan="9" id="nextplayer">The next player is X!</th></tr>
+		<script>
+			var x,y;
+			for (x=1; x<=9; x++) {
+  				document.write("<tr>");
+  				for (y=1; y<=9; y++) {
+    				var id = ""+x+y;
+    				document.write("<th class=\"cell\" id=\"s" + id + "\" onclick=\"clicked(" + id + ");\" width=\"15\">&nbsp;</th>");
+  				}
+  				document.write("</tr>");
+			}
+		</script>
+	</table>
+	<p><a href="index.html">Home</a></p>
+</body>
+</html>

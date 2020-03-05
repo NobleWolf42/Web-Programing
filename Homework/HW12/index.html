@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+	<title>Home Work 12 - Benjamin Carpenter</title>
+	<link rel="shortcut icon" href="http://hw.cs.southern.edu/favicon.ico" mce_href="http://hw.cs.southern.edu/favicon.ico"/>
+	<script language="javascript" src="validate.js"></script>
+	<script language="javascript">
+  		function notice(x) {
+			var newval = prompt("Former value:" + myBoard[x] + "  Enter number for square " + x,"");
+	 		if (moveOK(x,newval)) {
+	     		document.getElementById("b" + x).innerHTML=newval;
+	     		myBoard[x] = newval;
+	  		}
+  		}
+  		function makeSection(b) {
+	  		// Creates a section of a Sudoku board
+	  		var square;
+	  		document.write("<table border=\"1\">");
+	  		for (var i = 0; i<3; i++) { // Rows down
+	    		document.write("<tr>");
+	    	for (var j = 0; j<3; j++) { // Columns across
+		  		which = b + (i*9) + j;
+		  		square = myBoard[which];
+		  		if (square==0) { square = "&nbsp;&nbsp;" }
+          		document.write("<td id=\"b" + which + "\" onclick=\"notice(" + which + ");\" >&nbsp;" + square + "&nbsp;</td>"); 
+			}
+			document.write("</tr>");
+	  	}
+	  	document.write("</table>");
+  }
+</script>
+</head>
+<body>
+<p><a href="/projects/bcarpenter">Home</a></p>
+<h1>JavaScript Plays Sudoku</h1>
+<h3>Sudoku Board</h3>
+<p>Click on a square, then enter your desired number.</p>
+<script language="javascript">
+   	var myBoard = new Array(1,6,0,	9,0,0,	0,7,0,
+						    0,0,8,	0,0,5,	4,6,0,
+						    0,5,0,	0,4,6,	9,0,0,
+						  
+						    6,0,0,	0,0,0,	2,9,0,
+						    0,0,0,	0,7,0,	0,0,0,
+						    0,7,9,	0,0,0,	0,0,6,
+						  
+						    0,0,6,	1,9,0,	0,8,0,
+						    0,3,1,	4,0,0,	5,0,0,
+						    0,8,0,	0,0,7,	0,1,4);
+  	document.write("<table border=\"3\">");
+  	for (var r=0; r<3; r++) {
+		document.write("<tr>");
+	  	for (c=0; c<3; c++) {
+		  	document.write("<td>");
+		  	makeSection((r*27+c*3));
+		  	document.write("</td>");
+	  	}
+	  	document.write("</tr>");
+  	}
+  	document.write("</table>");
+</script>
+<p><a href="/projects/bcarpenter">Home</a></p>
+</body>
+</html>

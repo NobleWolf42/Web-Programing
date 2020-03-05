@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JSON Demo of Weather</title>
+	<link rel="shortcut icon" href="http://hw.cs.southern.edu/favicon.ico" mce_href="http://hw.cs.southern.edu/favicon.ico"/>
+<script language="javascript">
+var key = "2592d43307a587fb69f1d0be5fc5c3e2";
+//http://api.openweathermap.org/data/2.5/weather?id=4614720&mode=json&units=imperial&appid=2592d43307a587fb69f1d0be5fc5c3e2
+var url1 = "https://api.openweathermap.org/data/2.5/weather?";
+var url2 = "id=4614720&mode=json&units=imperial&appid=";
+var url = url1 + url2 + key;
+var xmlhttp = new XMLHttpRequest();
+
+var windd = new Array();
+    windd[0]="East";
+    windd[1]="North-East";
+    windd[2]="North";
+    windd[3]="North-West";
+    windd[4]="West";
+    windd[5]="South-West";
+    windd[6]="South";
+    windd[7]="South-East";
+
+xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        var myArr = JSON.parse("[" + xmlhttp.responseText + "]");
+		myproc(myArr);
+		}
+}
+
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+function myproc(jarray) {
+  document.getElementById("temp").innerHTML = jarray[0]["main"]["temp"];
+  document.getElementById("skycondition").innerHTML = jarray[0]["weather"][0]["description"];
+  document.getElementById("windspeed").innerHTML = jarray[0]["wind"]["speed"];
+  document.getElementById("winddir").innerHTML = windd[~~((jarray[0]["wind"]["deg"]+23)/45)];
+}
+
+window.onload=myproc;
+</script>
+</head>
+<body>
+<p><a href="/projects/bcarpenter/Homework/HW15">Main Page</a></p>
+<table border="5">
+	<tr>
+		<td colspan="2">Temperature:</td><td><a id="temp"></a>°F</td>
+	</tr>
+	<tr>
+		<td colspan="3">The sky has <a id="skycondition"></a></td>
+	</tr>
+	<tr>
+		<td colspan="3">Wind is <a id="windspeed"></a> mph from the <a id="winddir"></a></a></td>
+	</tr>
+</table>
+<p><a href="/projects/bcarpenter/Homework/HW15">Main Page</a></p>
+</body></html>
