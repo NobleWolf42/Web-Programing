@@ -68,7 +68,12 @@
 			$chrs = $localhour - 12;
 			$ampm = "PM";
 		}
-		print $chrs . ":" . $localctime[1] . " " . $ampm;
+		if ($localctime[1] < 10) {
+			print $chrs . ":0" . $localctime[1] . " " . $ampm;
+		}
+		else {
+			print $chrs . ":" . $localctime[1] . " " . $ampm;
+		}
 	}
 
 	function currenthrs()
@@ -153,7 +158,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Home Work 18 - Benjamin Carpenter</title>
+	<title>Home Work 02 - Benjamin Carpenter</title>
 	<link rel="shortcut icon" href="http://hw.cs.southern.edu/favicon.ico" mce_href="http://hw.cs.southern.edu/favicon.ico"/>
 </head>
 <body>
@@ -161,14 +166,14 @@
 	<h1>Where Am I ?</h1>
 	<ol>
 		<h2><li>Wireless Check</li></h2>
-			<!--<p>Your client is <= $remote ?> and its hostname is <= $clienthostname ?></p>
-			<p>The server is <= $server ?> and its hostname is <= $serverhostname ?></p>-->
-			<p>The server's hostname is <?= $serverhostname ?>
+			<!--<p>Your client is <= $remote ?> and its hostname is <= $clienthostname ?></p>-->
+			<!--<p>The server is <= $server ?> and its hostname is <= $serverhostname ?.</p>-->
+			<p>The server's hostname is <?= $serverhostname ?></p>
 			<p>You are<?= $saunetwork ?>on the SAU wireless network</p>
 		<h2><li>Factoring</li></h2>
 			<?php factoring() ?>
-		<h2><li>Server Array</li></h2>
-			<?php servervalues() ?>
+		<!--<h2><li>Server Array</li></h2>
+			<= servervalues() ?>-->
 		<h2><li>Decimal Hours</li></h2>
 			<p><?= $mintohr ?> minutes is <?php dechours($mintohr) ?> decimal hours.</p>
 		<h2><li>Current Time</li></h2>

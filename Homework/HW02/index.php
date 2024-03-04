@@ -68,7 +68,12 @@
 			$chrs = $localhour - 12;
 			$ampm = "PM";
 		}
-		print $chrs . ":" . $localctime[1] . " " . $ampm;
+		if ($localctime[1] < 10) {
+			print $chrs . ":0" . $localctime[1] . " " . $ampm;
+		}
+		else {
+			print $chrs . ":" . $localctime[1] . " " . $ampm;
+		}
 	}
 
 	function currenthrs()
