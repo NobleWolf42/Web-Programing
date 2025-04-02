@@ -20,7 +20,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Clear Database</title>
-	<link rel="shortcut icon" href="faveicon.ico" mce_href="/faveicon.ico"/>
+	<link rel="shortcut icon" href="/faveicon.ico" mce_href="/faveicon.ico"/>
 </head>
 <body>
 	<table border="1">

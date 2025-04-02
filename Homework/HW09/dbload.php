@@ -38,7 +38,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Load Database</title>
-	<link rel="shortcut icon" href="faveicon.ico" mce_href="/faveicon.ico"/>
+	<link rel="shortcut icon" href="/faveicon.ico" mce_href="/faveicon.ico"/>
 </head>
 <body>
 	<p>We have added <?= $count ?> rows to the table.</p>

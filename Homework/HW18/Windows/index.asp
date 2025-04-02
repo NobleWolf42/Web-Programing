@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>ASP Demo</title>
-	<link rel="shortcut icon" href="faveicon.ico" mce_href="/faveicon.ico"/>
+	<link rel="shortcut icon" href="/faveicon.ico" mce_href="/faveicon.ico"/>
 </head>
 <body>
 <h1>Where Am I?</h1>
@@ -14,7 +14,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Home Work 18 - Benjamin Carpenter</title>
-	<link rel="shortcut icon" href="faveicon.ico" mce_href="/faveicon.ico"/>
+	<link rel="shortcut icon" href="/faveicon.ico" mce_href="/faveicon.ico"/>
 </head>
 <body>
 	<p><a href="/index.html">Home</a></p>

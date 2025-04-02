@@ -42,7 +42,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Update Database</title>
-	<link rel="shortcut icon" href="faveicon.ico" mce_href="/faveicon.ico"/>
+	<link rel="shortcut icon" href="/faveicon.ico" mce_href="/faveicon.ico"/>
 </head>
 <body>
 	<p>We have update the balences for <?= $count ?> accounts.</p>

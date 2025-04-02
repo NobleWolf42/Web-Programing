@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Home Work 17 - Benjamin Carpenter</title>
-	<link rel="shortcut icon" href="faveicon.ico" mce_href="/faveicon.ico"/>
+	<link rel="shortcut icon" href="/faveicon.ico" mce_href="/faveicon.ico"/>
 </head>
 <body>
 	<p><a href="/index.html">Home</a></p>
