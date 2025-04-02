@@ -67,13 +67,14 @@
 	<p><a href="/projects/bcarpenter">Home</a></p>
 	<h1>Bible Text Lookup</h1>
 	<h3>Form</h3>
-	<p>Please Input a Bible Reference (make sure to spell out the book, place a space between the book and chapter, and a colon between the chapter and verse) and the verse will be returned below.</p>
+	<p>Please Input a Bible Reference (make sure to spell out the book, place a space between the book and chapter) and the chapter will be returned below.</p>
 	<form action="submit.php" method="sticky">
 		<p>Bible Reference: <input type="text" name="reference" value=<?= '"' . $referencedis . '"' ?>></p>
 		<p><input type="submit" value="Submit Query" /></p>
 	</form>
 	<h3>Bible Text</h3>
-	<p><?= $referencedis . " - " . '"' . $versetxt . '"' ?></p>
+	<p><?= $referencedis ?></p>
+    <?= $versetxt ?>
 	<p><a href="/projects/bcarpenter">Home</a></p>
 </body>
 </html>
