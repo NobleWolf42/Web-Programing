@@ -3,7 +3,6 @@
 
 
 	$reference = $_GET['reference'];
-    die($reference);
 	$bookcheck = substr($reference, 0, 2);
 
 	if (strtolower(substr($reference, 0, 15)) == "song of solomon"){
@@ -29,6 +28,7 @@
 	}
 
 	$bookname = $explodedbook['0'];
+    $chapter = $explodedbook['1'];
 	$booknamel = strtolower($bookname);
 	
 	/*if (!strpos($explodedbook['1'], ':')) {
