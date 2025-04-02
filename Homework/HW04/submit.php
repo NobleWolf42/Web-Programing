@@ -1,4 +1,5 @@
 <?php
+    include("../../bibleurl.php");
 	include 'bookindex.php';
 
 
@@ -52,7 +53,7 @@
 		else {
 			$book = $booknum;
 		}
-		$versetxt = @implode('', file('https://bencarpenterit.com/projects/bcarpenter/bible/b/' . $book . '_' . $chapter . '.htm'));
+		$versetxt = @implode('', file($url . $book . '_' . $chapter . '.htm'));
 	}
 
 	$referencedis = $booknamedis . " " . $chapter;
