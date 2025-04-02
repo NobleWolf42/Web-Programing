@@ -3,6 +3,7 @@
 
 
 	$reference = $_GET['reference'];
+    die($reference)
 	$bookcheck = substr($reference, 0, 2);
 
 	if (strtolower(substr($reference, 0, 15)) == "song of solomon"){
