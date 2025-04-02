@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Home Work 14 - Benjamin Carpenter</title>
-	<link rel="shortcut icon" href="http://hw.cs.southern.edu/favicon.ico" mce_href="http://hw.cs.southern.edu/favicon.ico"/>
+	<link rel="shortcut icon" href="faveicon.ico" mce_href="/faveicon.ico"/>
 	<SCRIPT language="JavaScript" SRC="script10.js"></SCRIPT>
 	<link rel="stylesheet" type="text/css" href="script03.css" />
 </head>

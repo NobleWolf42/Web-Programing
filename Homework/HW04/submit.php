@@ -30,14 +30,14 @@
 	$bookname = $explodedbook['0'];
 	$booknamel = strtolower($bookname);
 	
-	if (!strpos($explodedbook['1'], ':')) {
+	/*if (!strpos($explodedbook['1'], ':')) {
     	die('The Verse You Entered was Invalid, Please Make Sure You Entered a ":" and <a href="index.php">Try Again</a>.');
 	}
 	else {
 		$explodednumbers = explode(":", str_replace(" ", "", $explodedbook['1']));
 		$chapter = $explodednumbers['0'];
 		$verse = $explodednumbers['1'];
-	}
+	}*/
 	
 
 	if (!array_key_exists ($booknamel, $books)) {
@@ -51,23 +51,23 @@
 		else {
 			$book = $booknum;
 		}
-		$versetxt = @implode('', file('http://hw.cs.southern.edu/Bible/b' . $book . '_' . $chapter . '_' . $verse . '.htm'));
+		$versetxt = @implode('', file('https://bencarpenterit.com/projects/bcarpenter/bible/b/' . $book . '_' . $chapter . '.htm'));
 	}
 
-	$referencedis = $booknamedis . " " . $chapter . ":" . $verse;
+	$referencedis = $booknamedis . " " . $chapter;
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Home Work 04 - Benjamin Carpenter</title>
-	<link rel="shortcut icon" href="http://hw.cs.southern.edu/favicon.ico" mce_href="http://hw.cs.southern.edu/favicon.ico"/>
+	<link rel="shortcut icon" href="faveicon.ico" mce_href="/faveicon.ico"/>
 </head>
 <body>
 	<p><a href="/projects/bcarpenter">Home</a></p>
 	<h1>Bible Text Lookup</h1>
 	<h3>Form</h3>
-	<p>Please Input a Bible Reference (make sure to spell out the book, place a space inbetween the book and chapter, and a colon inbetween the chapter and verse) and the verse will be returned below.</p>
+	<p>Please Input a Bible Reference (make sure to spell out the book, place a space between the book and chapter, and a colon between the chapter and verse) and the verse will be returned below.</p>
 	<form action="submit.php" method="sticky">
 		<p>Bible Reference: <input type="text" name="reference" value=<?= '"' . $referencedis . '"' ?>></p>
 		<p><input type="submit" value="Submit Query" /></p>
